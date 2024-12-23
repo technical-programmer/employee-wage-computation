@@ -13,10 +13,15 @@ using namespace std;
 // }
 
 void employeeWageCalculator(int employeeType){
-    if(employeeType==1){
-        cout << "employee is full-time  and his wage is " << 8*20 << endl;
-    }else {
-        cout << "Employee is Part-time ans his wage is " << 4*20 << endl;
+    switch (employeeType)
+    {
+    case 1:
+        cout << "Employee is full-time and his wage is " << 8*20 <<endl;
+        break;
+    
+    default:
+        cout << "Employee is part-time ans his wage is " << 4*20 << endl;
+        break;
     }
 }
 
@@ -28,22 +33,18 @@ int main(){
 
         int randombit = rand() % 2; 
         
-    if(randombit == 0){
+    switch (randombit)
+    {
+    case 0:
         cout << "Employee is Absent" << endl;
-    }else{
-         cout << "Employee is Present" << endl;
-
-         int employeeType = rand() % 2;
-         employeeWageCalculator(employeeType);
-    }
-
+        break;
     
-
-
-
-
-
-return 0;
-}
+    default:
+        cout << "Employee is present" << endl;
+        int employeeType = rand() % 2;
+        employeeWageCalculator(employeeType);
+        break;
+    }
+    }
 
 
