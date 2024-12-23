@@ -16,7 +16,7 @@ void employeeWageCalculator(int employeeType){
     if(employeeType==1){
         cout << "employee is full-time  and his wage is " << 8*20 << endl;
     }else {
-        cout << "Employee is Part-time ans his wage is " << 8*20 << endl;
+        cout << "Employee is Part-time ans his wage is " << 4*20 << endl;
     }
 }
 
